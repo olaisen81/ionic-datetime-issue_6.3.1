@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "datetimeRep",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

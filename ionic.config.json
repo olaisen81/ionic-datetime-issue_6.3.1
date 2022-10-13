@@ -1,0 +1,7 @@
+{
+  "name": "datetimeRep",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
