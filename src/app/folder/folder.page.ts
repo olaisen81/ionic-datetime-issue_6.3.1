@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { IonDatetime } from '@ionic/angular';
 import { format, parseISO } from 'date-fns';
-
+import { it } from 'date-fns/locale';
 @Component({
   selector: 'app-folder',
   templateUrl: './folder.page.html',
@@ -35,11 +35,11 @@ export class FolderPage implements OnInit {
 
     if (this.ionDaData) {
       //Setto la data per il formato corretto su DB
-      const date = format(parseISO(this.ionDaData.value as string), 'yyyy-MM-dd', { locale: {code: 'it'} });
+      const date = format(parseISO(this.ionDaData.value as string), 'yyyy-MM-dd', { locale: it });
       this.form.controls.daData.setValue(date);
 
       //Setto la data in formato corretto per essere visualizzata (es. 22 giugno 1981)
-      const sData = format(parseISO(this.ionDaData.value as string), 'dd MMMM yyyy', { locale: {code: 'it'} });
+      const sData = format(parseISO(this.ionDaData.value as string), 'dd MMMM yyyy', { locale: it });
       this.form.controls.daDataNoBind.setValue(sData);
     }
   }
